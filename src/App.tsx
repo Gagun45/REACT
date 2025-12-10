@@ -1,8 +1,8 @@
+import TodosComponent from "./components/todos-component/TodoComponents.tsx";
+
 const App = () => {
     return (
-        <h1 className="text-red-400">
-            homepage
-        </h1>
+        <TodosComponent/>
     );
 };
 
