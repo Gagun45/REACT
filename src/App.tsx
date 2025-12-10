@@ -1,9 +1,18 @@
-function App() {
-  return (
-    <h1 className="text-red-400">
-      homepage
-    </h1>
-  )
-}
+const coursesTitleArray = [
+    'JavaScript Complex',
+    'Java Complex',
+    'Python Complex',
+    'QA Complex',
+    'Fullstack',
+    'Frontend'
+];
 
-export default App
+const App = () => {
+    return (
+        <ul className='bg-slate-500'>
+            {coursesTitleArray.map((course, i) => <li key={i}>{course}</li>)}
+        </ul>
+    );
+};
+
+export default App;
