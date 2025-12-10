@@ -1,9 +1,12 @@
-function App() {
-  return (
-    <h1 className="text-red-400">
-      homepage
-    </h1>
-  )
-}
+import {coursesAndDurationArray} from "./data/data.ts";
+import CourseComponent from "./components/course-component/CourseComponent.tsx";
 
-export default App
+const App = () => {
+    return (
+        <ul className="flex flex-col gap-4 border border-green-300 p-4 m-4">
+            {coursesAndDurationArray.map((course, i) => (<CourseComponent key={i} course={course}/>))}
+        </ul>
+    );
+};
+
+export default App;
