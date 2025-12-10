@@ -1,8 +1,8 @@
+import {Posts} from "./components/posts-component/Posts.tsx";
+
 const App = () => {
     return (
-        <h1 className="text-red-400">
-            homepage
-        </h1>
+        <Posts/>
     );
 };
 
