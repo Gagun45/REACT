@@ -1,9 +1,9 @@
+import FamilyComponent from "./components/family-component/FamilyComponent.tsx";
+
 function App() {
-  return (
-    <h1 className="text-red-400">
-      homepage
-    </h1>
-  )
+    return (
+        <FamilyComponent/>
+    )
 }
 
 export default App
