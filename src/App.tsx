@@ -1,8 +1,8 @@
+import {Products} from "./components/products/Products.tsx";
+
 const App = () => {
     return (
-        <h1 className="text-red-400">
-            homepage
-        </h1>
+        <Products/>
     );
 };
 
