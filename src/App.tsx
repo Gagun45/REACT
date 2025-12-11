@@ -1,8 +1,8 @@
+import {Comments} from "./components/comments/Comments.tsx";
+
 const App = () => {
     return (
-        <h1 className="text-red-400">
-            homepage
-        </h1>
+        <Comments/>
     );
 };
 
