@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@layer base {
+    ul{ @apply space-y-2}
+}

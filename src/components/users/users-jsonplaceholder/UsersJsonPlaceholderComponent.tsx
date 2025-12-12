@@ -11,11 +11,13 @@ export const UsersJsonPlaceholderComponent = () => {
             setUsers(allUsers);
         }
         fetchData()
-    },[])
+    }, [])
     return (
         <div>
-            <h2>users json placeholder</h2>
-            {users.map((user) => (<UserComponent key={user.id} user={user} />))}
+            <h2>users jsonplaceholder</h2>
+            <ul>
+                {users.map((user) => (<UserComponent key={user.id} user={user}/>))}
+            </ul>
         </div>
     );
 };

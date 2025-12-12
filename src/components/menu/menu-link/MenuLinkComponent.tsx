@@ -6,8 +6,8 @@ type Props = { link: IMenuLink };
 
 export const MenuLinkComponent: FC<Props> = ({link: {href, label}}) => {
     return (
-        <li className='border px-2 hover:bg-slate-400'>
-            <Link to={href}>{label}</Link>
+        <li >
+            <Link className={'border px-2 hover:bg-slate-400'} to={href}>{label}</Link>
         </li>
     );
 };
