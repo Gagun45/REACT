@@ -10,6 +10,11 @@ import {
     PostsJsonPlaceholderComponent
 } from "../components/posts/posts-jsonplaceholder/PostsJsonPlaceholderComponent.tsx";
 import {PostsDummyJsonComponent} from "../components/posts/posts-dummyjson/PostsDummyJsonComponent.tsx";
+import {CommentsLayout} from "../layouts/CommentsLayout.tsx";
+import {
+    CommentsJsonPlaceholderComponent
+} from "../components/comments/comments-jsonplaceholder/CommentsJsonPlaceholderComponent.tsx";
+import {CommentsDummyJsonComponent} from "../components/comments/comments-dummyjson/CommentsDummyJsonComponent.tsx";
 
 export const routes = createBrowserRouter([
     {
@@ -27,6 +32,13 @@ export const routes = createBrowserRouter([
                 children: [
                     {path: 'jsonplaceholder', element: <PostsJsonPlaceholderComponent/>},
                     {path: 'dummyjson', element: <PostsDummyJsonComponent/>}
+                ]
+            },
+            {
+                path: 'comments', element: <CommentsLayout/>,
+                children: [
+                    {path: 'jsonplaceholder', element: <CommentsJsonPlaceholderComponent/>},
+                    {path: 'dummyjson', element: <CommentsDummyJsonComponent/>}
                 ]
             }
         ]
