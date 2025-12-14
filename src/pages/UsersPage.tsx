@@ -1,12 +1,10 @@
 import {UsersComponent} from "../components/users/users-component/UsersComponent.tsx";
-import {Outlet} from "react-router-dom";
 
-export const HomePage = () => {
+export const UsersPage = () => {
     return (
         <>
-            <h1>Homepage</h1>
+            <h1>Users page</h1>
             <UsersComponent />
-            <Outlet/>
         </>
     );
 };
