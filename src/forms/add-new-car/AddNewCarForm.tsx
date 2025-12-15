@@ -2,13 +2,8 @@ import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {newCarValidator} from "../../validators/car-validator/NewCarValidator.ts";
 import {CarsService} from "../../service/cars.service.ts";
-import type {INewCar} from "../../models/car/INewCar.ts";
+import type {ICar} from "../../models/car/ICar.ts";
 
-interface formProps {
-    brand: string;
-    price: number;
-    year: number;
-}
 
 export const AddNewCarForm = () => {
     const {
@@ -16,12 +11,9 @@ export const AddNewCarForm = () => {
         handleSubmit,
         formState: {errors, isValid},
         reset
-    } = useForm<formProps>({mode: 'all', resolver: joiResolver(newCarValidator)})
-    const onSubmit = async (values: formProps) => {
-        const newCar: INewCar = {
-            ...values
-        }
-        const res = await CarsService.addNewCar(newCar)
+    } = useForm<ICar>({mode: 'all', resolver: joiResolver(newCarValidator)})
+    const onSubmit = async (values: ICar) => {
+        const res = await CarsService.addNewCar(values)
         console.log(res);
         reset()
     }
