@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import type {ICar} from "../../../models/car/ICar.ts";
 import {CarComponent} from "../car-component/CarComponent.tsx";
 import {CarsService} from "../../../service/cars.service.ts";
+import type {ICar} from "../../../models/car/ICar.ts";
 
 export const CarsComponent = () => {
     const [cars, setCars] = useState<ICar[]>([])

@@ -1,6 +1,5 @@
-export interface ICar {
-   id: number;
-   brand: string;
-   price: number;
-   year: number;
+import type {INewCar} from "./INewCar.ts";
+
+export interface ICar extends INewCar {
+    id: number;
 }
