@@ -1,17 +1,17 @@
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useEffect} from "react";
-import {loadUsers} from "../../redux/slices/userSlice/userSliceActions.ts";
-import {loadPosts} from "../../redux/slices/postSlice/postSliceActions.ts";
-import {loadComments} from "../../redux/slices/commentSlice/commentSliceActions.ts";
+import {userSliceActions} from "../../redux/slices/userSlice/userSlice.ts";
+import {postSliceActions} from "../../redux/slices/postSlice/postSlice.ts";
+import {commentSliceActions} from "../../redux/slices/commentSlice/commentSlice.ts";
 
 export const ComplexPage = () => {
     const {userSlice: {users}, commentSlice: {comments}, postSlice: {posts}} = useAppSelector(state => state);
     const dispatch = useAppDispatch();
     useEffect(() => {
-        if (!users) dispatch(loadUsers());
-        if (!posts) dispatch(loadPosts());
-        if (!comments) dispatch(loadComments());
+        if (!users) dispatch(userSliceActions.loadUsers());
+        if (!posts) dispatch(postSliceActions.loadPosts());
+        if (!comments) dispatch(commentSliceActions.loadComments());
     }, [])
 
     const allDataFetched = users && posts && comments
